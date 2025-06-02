@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using C3APPLICATION.Interfaces;
+﻿using C3APPLICATION.Interfaces;
 using C3APPLICATION.Services;
 using C1DOMAIN.Interfaces.IRepositories;
 using C1DOMAIN.Interfaces.IServices;
@@ -8,7 +6,7 @@ using C1DOMAIN.Services;
 using C2INFRA.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
-Console.WriteLine("Hello, World!\n");
+Console.WriteLine("fcouto1331 - P2025_DDD\n");
 
 #region CONFIGURAÇÃO IOC DI
 
