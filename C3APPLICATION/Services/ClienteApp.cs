@@ -18,7 +18,7 @@ namespace C3APPLICATION.Services
         {
             List<Cliente> cliente = _clienteService.GetAll<Cliente>();
             if (cliente == null) throw new InvalidOperationException("Não pode ser nula.");
-            Mapper.ClienteToClienteDto(cliente, out List<ClienteDTO> clienteDto);
+            Mapper.ToClienteDto(cliente, out List<ClienteDTO> clienteDto);
             return clienteDto;
         }
 
@@ -26,7 +26,7 @@ namespace C3APPLICATION.Services
         {
             Cliente cliente = _clienteService.GetById(ClienteId);
             if (cliente == null) throw new InvalidOperationException("Não pode ser nula.");
-            Mapper.ClienteToClienteDto(cliente, out ClienteDTO clienteDto);
+            Mapper.ToClienteDto(cliente, out ClienteDTO clienteDto);
             return clienteDto;
         }
     }

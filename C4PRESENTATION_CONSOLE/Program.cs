@@ -10,13 +10,15 @@ using Microsoft.Extensions.DependencyInjection;
 
 Console.WriteLine("Hello, World!\n");
 
-#region Config Ioc Di
+#region CONFIGURAÇÃO IOC DI
 
 // Configurar o contêiner de serviços
 var serviceCollection = new ServiceCollection();
+
 serviceCollection.AddTransient<IClienteRepository, ClienteRepository>();
 serviceCollection.AddTransient<IClienteService, ClienteService>();
 serviceCollection.AddTransient<IClienteApp, ClienteApp>();
+
 var serviceProvider = serviceCollection.BuildServiceProvider();
 
 // Resolver o contêiner de serviço
@@ -24,7 +26,7 @@ var clienteApp = serviceProvider.GetService<IClienteApp>();
 
 #endregion
 
-#region Camada_Application
+#region C3APPLICATION
 
 if (clienteApp != null) // Verificar se serviceProvider não é nulo
 {

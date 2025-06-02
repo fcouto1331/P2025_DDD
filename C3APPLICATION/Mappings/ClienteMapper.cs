@@ -5,7 +5,7 @@ namespace C3APPLICATION.Mapping
 {
     public partial class Mapper
     {
-        public static void ClienteDtoToCliente(List<ClienteDTO> clienteDto, out List<Cliente> cliente)
+        public static void ToCliente(List<ClienteDTO> clienteDto, out List<Cliente> cliente)
         {
             if (clienteDto == null) throw new ArgumentNullException(nameof(clienteDto));
             cliente = clienteDto.Select(dto => new Cliente(
@@ -14,7 +14,7 @@ namespace C3APPLICATION.Mapping
                 )).ToList();
         }
 
-        public static void ClienteDtoToCliente(ClienteDTO clienteDto, out Cliente cliente)
+        public static void ToCliente(ClienteDTO clienteDto, out Cliente cliente)
         {
             if (clienteDto == null) throw new ArgumentNullException(nameof(clienteDto));
             cliente = new Cliente(
