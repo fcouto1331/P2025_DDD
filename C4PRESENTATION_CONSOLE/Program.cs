@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 Console.WriteLine("fcouto1331 - P2025_DDD\n");
 
-#region CONFIGURAÇÃO IOC DI
+#region CONFIGURAÇÃO
 
 // Configurar o contêiner de serviços
 var serviceCollection = new ServiceCollection();
@@ -24,7 +24,7 @@ var clienteApp = serviceProvider.GetService<IClienteApp>();
 
 #endregion
 
-#region C3APPLICATION
+#region COMANDOS
 
 if (clienteApp != null) // Verificar se serviceProvider não é nulo
 {
